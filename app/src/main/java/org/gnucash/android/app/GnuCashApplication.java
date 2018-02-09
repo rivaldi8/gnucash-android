@@ -334,7 +334,7 @@ public class GnuCashApplication extends MultiDexApplication {
      */
     public static void startScheduledActionExecutionService(Context context){
         Intent alarmIntent = new Intent(context, PeriodicJobReceiver.class);
-        alarmIntent.setAction(PeriodicJobReceiver.ACTION_BACKUP);
+        alarmIntent.setAction(PeriodicJobReceiver.ACTION_SCHEDULED_ACTIONS);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context,0, alarmIntent,
                                                                  PendingIntent.FLAG_NO_CREATE);
 
